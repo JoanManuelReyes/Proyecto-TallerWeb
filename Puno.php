@@ -22,6 +22,7 @@
            <a href="Contactanos.php">Contactanos</a>
            <a href="Ejercicios1JS.php">Ejercicios JS</a>
            <a href="EjercicioPHP1.php">Ejercicios PHP</a>
+           <a href="administrador.php">Administrador</a>
         </nav>
         
             <form method="post" class="form-nav" action="/RegionCosta.php">
