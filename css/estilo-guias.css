@@ -1,68 +1,213 @@
-body
-{
-	background-color: #FAF5E0;
-	padding: 150px 50px;
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color:#FAF5E0;
+    padding: 10px 30px ;
 }
 
-header
-{
-	text-align: center;
-	background-color: brown;
-	position: fixed;
-	top: 0;
+header{
+    width: 100%;
+    height: 150px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2937;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     box-shadow: 5px 10px 10px black;
+    z-index: 2;
 }
-.item-nosotros{
-	flex-basis: calc(50% - 100px)
+header img{
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 7px 14px 10px black ;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+header img:hover{
+    cursor: pointer;
+    transform: scale(1.11);
+    transition: 0.5s;
+}
+
+.boton{
+    margin-left: -200px;
+}
+
+.boton form-nav{
+    padding: 10px;
+}
+nav{
+    padding-right: 10px;
+    transform: translatex(40px);
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color:#E9ADA3;
+    margin: 30px;
+    transition: 0.5s;
+}
+nav a:hover{
+    font-size:23px ;
+    cursor: pointer;
+    color: #D5372F;
+    transition: 0.5s;
+}
+hr{
+    border-color: black;
+    margin-bottom:20px ;
+}
+
+.titulo{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 50px;
+    margin:0px 0px 0px 0px ;
+    text-align: center;
+}
+
+.uno{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.imagen{
+    width: 900px;
+    height: 570px;
+    margin: 10px 20px;
+}
+
+.texto{
+    font-size: 28px;
+    margin: 10px 10px;
+}
+
+.gtc{
+    padding: 40px 0px 20px 0px;
+}
+
+.gunny{
+    margin: 0px 0px 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gunny1 img{
+    width: 450px;
+    height:400px;
+}
+
+.gunny1{
+    font-size: 23px;
+    margin: 10px 70px 0px 0px;
+
+}
+
+.gunny2 img{
+    width: 500px;
+    height:400px;
+}
+
+.gunny2{
+    font-size: 23px;
+    margin: 10px 50px 0px 0px;
+}
+
+.gunny3 img{
+    width: 400px;
+    height: 400px;
+}
+
+.gunny3{
+    font-size: 23px;
+    margin: 10px 0px 0px 0px;
+}
+
+.gunny01 img{
+    width: 400px;
+    height: 500px;
+}
+
+.gunny01{
+    margin: 10px 50px 10px 50px;
+}
+
+.gunny02 img{
+    width: 400px;
+    height: 500px;
+}
+
+.gunny02{
+    font-size: 23px;
+    margin: 10px 90px 0px 0px;
+}
+
+.gunny03 img{
+    width: 400px;
+    height: 500px;
+}
+
+.gunny03{
+    font-size: 23px;
+    margin: 10px 60px 0px 10px;
+}
+
+.centrado{
+    text-align: center;
 }
 
 .contenido-columnas{
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
 }
-.contenido-columnas p{
-	margin-top: 80px;
-}
-.foto-especialistas img{
-	width: 400px;
-	height: 300px
-}
-.item-especialistas{
-	flex-basis: calc(33.3% - 50px)
-}
-
-
-
 footer{  
+    
     border-radius: 20px;
     border: outset; 
 }
-.centrado{
-    text-align: center;
+footer a,p{  
+    font-size: 20px;
 }
 #pie{
     background: #566D8D;
 }
+
 .item-footer{
     flex-basis: calc(50% - 50px);
     transform: translateY(25px);
 }
+
 .padding-direccion{
     padding-top: 20px;
     padding-bottom: 20px; 
 }
+
 .logos-tamaño a{
     color:black;
     text-decoration: none;
 }
+
 .item-footer{
     flex-basis: calc(50% - 50px);
     transform: translateY(25px);
 }
+
 .item-footer img{
     width: 30px;
     height:40px;
@@ -70,19 +215,18 @@ footer{
     padding-bottom: 5px;
     
 }
+
 .padding-nosotros{
     padding-top: 20px;
     padding-bottom: 20px
 }
+
 .padding-2022{
     padding-top: 40px;
     padding-bottom: 40px; 
 }
+
 .padding-2022 a{
     color:black;
     text-decoration: none;
-}
-.contenido-footer{
-    display: flex;
-    justify-content: space-between;
 }

@@ -1,9 +1,14 @@
+main p{
+    font-size: 22px;
+}
+
 .centrado{
     text-align: center;
 }
 .contenido-columnas{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 .contenido-columnas h3{
     margin-top: 20px;
@@ -47,8 +52,6 @@
 
 .tarjeta-valores{
     background: #C18E52;
-    margin-left: 420px;
-    margin-right: 250px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 8%;

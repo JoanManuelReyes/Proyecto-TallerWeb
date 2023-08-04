@@ -14,7 +14,6 @@ header
     border-bottom: 1px solid black;
     box-shadow: 5px 10px 10px black;
     z-index: 99;
-
 }
 
 header h1
@@ -25,7 +24,6 @@ header h1
 .titulo
 {
 	text-align: center;
-
 	background-color: #D5372F;
     overflow: hidden;
     position: sticky;
@@ -35,17 +33,13 @@ header h1
 {
 	display: flex;
 	justify-content: space-around;
-	
-	
-	
-
-
 }
 .contenido img
 {
 	width: 400px;
 	height: 350px;
 }
+
 
 .next 
 {
@@ -61,12 +55,11 @@ header h1
 
 .after
 {
-
-	margin: 100px;
+	margin: 40px;
 }
 .dis a
 {
-	margin-left: 340px;
+	margin-left: 160px;
 
 }
 
@@ -76,6 +69,9 @@ header h1
 footer{  
     border-radius: 20px;
     border: outset; 
+}
+footer a,p{  
+    font-size: 20px;
 }
 .centrado{
     text-align: center;
@@ -121,4 +117,21 @@ footer{
 .contenido-columnas{
     display: flex;
     justify-content: space-between;
+}
+
+
+
+/*modificaciones de letra*/
+main p,a{
+    font-size: 18px;
+}
+.contenido h3,li{
+    font-size: 18px;
+}
+.detalles{
+    display: flex;
+    justify-content: space-around;
+}
+.referencia a{
+    text-align: center;
 }
