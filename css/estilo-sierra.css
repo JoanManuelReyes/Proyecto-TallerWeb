@@ -1,0 +1,66 @@
+.imagen-slider{
+	width: 100%;
+	height: 720px;
+	overflow: hidden;
+    box-shadow: 5px 10px 10px black;
+	
+
+}
+
+.imagen-slider ul{
+	display: flex;
+	padding: 0;
+	animation: cambio 15s infinite alternate linear;
+	animation-timing-function: ease-in-out;
+	width: 300%;
+}
+
+.imagen-slider li{
+	width: 100%;
+    height: 100%;
+	list-style: none;
+
+}
+
+.imagen-slider img{
+	width: 100%;
+	height: 720px;
+	
+}
+
+@keyframes cambio{
+	0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+
+}
+
+.centrado{
+	text-align: center;
+	margin: 30px 200px;
+}
+
+.space{
+	margin: 35px 350px;
+}
+header h1{
+	color:#E9ADA3;
+}
+.contenidoColumnas{
+	display: flex;
+	justify-content: space-around;
+}
+.fotoSierra img{
+	width: 330px;
+	height: 250px;
+	border-radius: 3%;
+}
+.itemSierra{
+	flex-basis: calc(20% - 100px);
+}
+

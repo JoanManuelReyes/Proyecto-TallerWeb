@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo-selva.css">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilo-selva.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilo-Rselva.css">
     <title>Tours de la Amazonia</title>
 </head>
     <body>
         <header>
-            <img  src="Imagenes_header/imagen1.jpeg">
-            <nav>
-               <a href="index.html">Inicio</a>
-               <a href="Nosotros.html">¿Quiénes somos?</a>
-               <a href="Frame.html">Paquetes de tours</a>
-               <a href="GuiasTuristicos.html">Nuestros guias</a>
-               <a href="Contactanos.html">Contactanos</a>
-            </nav>	
-            <form method="post" class="form-nav" action="">
+        <img  src="Imagenes_header/imagen1.jpeg">
+        <nav>
+           <a href="index.html">Inicio</a>
+           <a href="Nosotros.html">¿Quiénes somos?</a>
+           <a href="paquetes.html">Paquetes de tours</a>
+           <a href="GuiasTuristicos.html">Nuestros guias</a>
+           <a href="Contactanos.html">Contactanos</a>
+        </nav>
+        
+            <form method="post" class="form-nav" action="/RegionCosta.html">
                 <select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
                     <option selected>Departamentos</option>
                     <option value="Cusco.html">Cuzco</option>
@@ -31,9 +33,14 @@
                     <option value="#">Paracas</option>
                     <option value="Puno.html">Puno</option>
                 </select>
-                <input type="button" name="iniciar" value="INICIAR">
             </form>
-        </header>
+
+            <form class="boton" action="/iniciar.html">
+                <input type="submit" value="INICIAR">
+            </form>
+        
+        
+    </header>
         <hr/>
         <h1 id="titulo-P"><b>Tours en la selva de nuestro pais</b></h1>
         
@@ -41,11 +48,14 @@
                     <div class="slider__intro">
                         
                         <br>
-                        <ul>
-                            <li><img class="" src="imagenes_selva/img1.jpg"  alt=""></li>
-                            <li><img src="imagenes_selva/img2.jpg"  alt=""></li>
-                            <li><img src="imagenes_selva/img3.jpg"  alt=""></li>
-                        </ul>
+                        <div class="recorrido-selva">
+                            <ul>
+                                <li><img src="imagenes_selva/img1.jpg"  alt=""></li>
+                                <li><img src="imagenes_selva/img2.jpg"  alt=""></li>
+                                <li><img src="imagenes_selva/img3.jpg"  alt=""></li>
+                            </ul>
+                        </div>
+                       
                         <h2>Disfruta de la flora y fauna que te ofrece nuestra amazonia</h2> 
                         
                            <p>
@@ -121,8 +131,33 @@
                     </ul>
                 </div>
             </div>    
-       </section>         
+       </section>  
+              
+    <footer id="pie" class="centrado">
 
+        <div class="contenido-columnas">
+            <div class="item-footer padding-direccion">
+                <h2>DIRECCIÓN</h2>
+                <p>Av. Arequipa 1480,Cercado de Lima, Provincia de Lima</p>
+                <p>+51 945 654 321</p>
+                <p>informaciones@andesfly.com | derechosrecervadors@andesfly.com</p>
+            </div>
+
+            <div class="logos-tamaño item-footer padding-nosotros">
+                <h2>CONOCE PERÚ<h2>
+                <a href="Nosotros.html">Sobre Nosotros</a><br>
+                <img src="Imagenes_header/facebook.png"><br>
+                <img src="Imagenes_header/youtube.png">
+            </div>
+
+            <div class="item-footer padding-2022">
+                <p><center>2022 ©</p>
+                <a href="index.html">Andes Fly S.A.</a>
+                <p>. All Rights Reserved</p>
+            </div>  
+        </div>
+
+    </footer>
         
         
           
