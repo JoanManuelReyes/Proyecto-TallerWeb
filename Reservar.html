@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/estilo-formulario.css">
+  <script src="js/validacionReserva.js"></script>
   <title></title>
 </head>
 <body>
@@ -15,6 +16,7 @@
        <a href="paquetes.html">Paquetes de tours</a>
        <a href="GuiasTuristicos.html">Nuestros guias</a>
        <a href="Contactanos.html">Contactanos</a>
+       <a href="Ejercicios1JS.html">Ejercicios JS</a>
     </nav>
     
       <form method="post" class="form-nav" action="/RegionCosta.html">
@@ -41,44 +43,50 @@
 
 
     <main class="tipotabla-reservar">
-      <h1>Formulario de reserva</h1>
+      <div class="centrado">
+        <h1>Formulario de reserva</h1>
+      </div>
         <h3>Podra reservar el anterior tour cuando complete los siguientes campos:</h3>
-          <form action="submeter-formulario.php" method="post">       
+          <form action="" id="formulario" onsubmit="reserva()" method="">       
                 <p>
                   <label for="nombre">Nombres:&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe tu nombre">
+                    <input type="text" id="nomnbre"  placeholder="Escribe tu nombre">
+                    <div></div>
                 </p>
 
                 <p>
                   <label for="apellido">Apellidos:&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe tu apellido">
+                    <input type="text" id="apellido"  placeholder="Escribe tu apellido">
+                    <div></div>
                 </p>
                 
                 <p>
-                  <label for="addres">Dirección:&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe tu dirección">
-                </p>
-                <p>
-                  <label for="addres">DNI:&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe tu número de DNI">
+                  <label for="addres">DNI:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="dni"  placeholder="Escribe tu número de DNI">
+                    <div></div>
                 </p>
 
-                <p><label for="email">Metodo de pago:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></p>
+                <p><label for="email">Metodo de pago:</label></p>
                 <p>
                   <input type="checkbox" name="Tarjeta Visa" value="">Tarjeta Visa&nbsp;
                   <input type="checkbox" name="Tarjeta MasterCard" value="">MasterCard&nbsp;
                   <input type="checkbox" name="Tarjeta de débito - BBVA Perú" value="">Tarjeta de débito - BBVA Perú
                 </p>  
                 <p>
-                  <label for="addres">Número de tarjeta:&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe tu número de tarjeta">
+                  <label for="tarjeta">Número de tarjeta:&nbsp;&nbsp;</label>
+                    <input type="text"  id ="tarjeta" placeholder="Escribe tu número de tarjeta">
+                    <div></div>
                 </p>  
                 <p>
-                  <label for="addres">CVC:&nbsp;&nbsp;</label>
-                    <input type="text"  required="obligatorio" placeholder="Escribe el CVC de tu tarjeta">
+                  <label for="cvc">CVC:&nbsp;&nbsp;</label>
+                    <input type="text" id="cvc"  placeholder="Escribe el CVC de tu tarjeta">
+                    <div></div>
                 </p>
-                <button type="submit"  id="rRegistrarse"><p>Rerservar</p></button>
+                <div class="centrado">
+                  <button type="submit"  id="rRegistrarse">Rerservar</button>
+                </div>
           </form>
+          <div id="error"></div>
     </main> 
     
     <footer id="pie" class="centrado">
@@ -99,6 +107,7 @@
       </div>
 
       <div class="item-footer padding-2022">
+        <a href="LibroReclamos.html">Libro de Reclamos</a>
         <p><center>2022 ©</p>
         <a href="index.html">Andes Fly S.A.</a>
         <p>. All Rights Reserved</p>

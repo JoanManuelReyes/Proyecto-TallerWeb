@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="estilos.css">
     <link rel="stylesheet" type="text/css" href="css/estilo-sierra.css">
     <title>Cusco Tour</title>
+    <script type="text/javascript" src="js/IncrementadorPrecio.js"></script>
 </head>
 
 <body>
@@ -19,6 +20,7 @@
            <a href="paquetes.html">Paquetes de tours</a>
            <a href="GuiasTuristicos.html">Nuestros guias</a>
            <a href="Contactanos.html">Contactanos</a>
+           <a href="Ejercicios1JS.html">Ejercicios JS</a>
         </nav>
         
             <form method="post" class="form-nav" action="/RegionCosta.html">
@@ -128,6 +130,69 @@
                 </p>
             </div>
         </div>
+
+        <div class="contenedor">
+            <h2 class="centrado">Contenido Mínimo</h2>
+                <div class="modificador">
+                    <div class="minimos">
+                        <p>Cantidad mínima de personas:</p>
+                        <p id="personasIniciales" value="">2</p>
+                        <p>Cantidad mínima de días:</p>
+                        <p id="diasIniciales" value="">4</p>
+                        <h2>Importante:</h2>
+                        <p>La cantidad de noches siempre es un valor anterior al de la cantidad de días.</p>
+                        </div>
+                </div>
+        </div>
+
+        <div class="centrado">
+            <div class="contenido-columnas">
+                <div class="contenedor">
+                    <h2>Personas</h2><br>
+                    <div class="modificador">
+                        <button id="verificador1" onclick="botonPersonas(this)" value="disminuir">
+                            <
+                        </button>
+
+                        <div class="valor">
+                            <p id="acumulado1" value="">2</p>
+                        </div>
+
+                        <button onclick="botonPersonas(this)" value="aumentar">
+                            >
+                        </button>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <h2>Días</h2><br>
+                    <div class="modificador">
+                        <button id="verificador2" onclick="botonDias(this)" value="disminuir">
+                            <
+                        </button>
+
+                        <div class="valor">
+                            <p id="acumulado2" value="">4</p>
+                        </div>
+
+                        <button onclick="botonDias(this)" value="aumentar">
+                            >
+                        </button>
+                    </div>
+                </div>
+
+                    <div class="contenedor">
+                        <h2>Total</h2>
+                        <div class="modificador">
+                            <div class="preciof">
+                                <p>S/.</p><p id="preciofinal" value="">990</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         <section class="centrado">
             <h2>¿TE GUSTO EL TOUR?</h2>
             <nav><a href="Reservar.html">Reserva ahora mismo</a></nav>
@@ -151,6 +216,7 @@
             </div>
 
             <div class="item-footer padding-2022">
+                <a href="LibroReclamos.html">Libro de Reclamos</a>
                 <p><center>2022 ©</p>
                 <a href="index.html">Andes Fly S.A.</a>
                 <p>. All Rights Reserved</p>

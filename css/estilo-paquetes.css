@@ -1,23 +1,79 @@
 body
 {
 	background-color: #FAF5E0;
-	margin: 0 50px;
+	margin:10px 50px;
 }
-header
-{
-	text-align: center;
-	background-color: #1F2937;
-	position: sticky;
-	top: 0;
+
+header{
+    width: 100%;
+    height: 150px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2937;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     box-shadow: 5px 10px 10px black;
-    z-index: 99;
-
+    z-index: 2;
+}
+header img{
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 7px 14px 10px black ;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+header img:hover{
+    cursor: pointer;
+    transform: scale(1.11);
+    transition: 0.5s;
 }
 
-header h1
+.boton{
+    margin-left: -200px;
+}
+
+.boton form-nav{
+    padding: 10px;
+}
+nav{
+    padding-right: 10px;
+    transform: translatex(40px);
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color:#E9ADA3;
+    margin: 30px;
+    transition: 0.5s;
+}
+nav a:hover{
+    font-size:23px ;
+    cursor: pointer;
+    color: #D5372F;
+    transition: 0.5s;
+}
+hr{
+    border-color: black;
+    margin-bottom:20px ;
+}
+
+.cabeza{
+	text-align: center;
+	background-color: #1F2937;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 10px 10px black;
+    margin-bottom: 70px;
+    
+}
+
+.cabeza h1
 {
 	color: #D5372F;
 }
@@ -25,27 +81,24 @@ header h1
 .titulo
 {
 	text-align: center;
-
 	background-color: #D5372F;
     overflow: hidden;
     position: sticky;
+    margin-top: 20px;
 }
 
 .contenido
 {
 	display: flex;
 	justify-content: space-around;
-	
-	
-	
-
-
+    margin-bottom: 30px;
 }
 .contenido img
 {
 	width: 400px;
 	height: 350px;
 }
+
 
 .next 
 {
@@ -61,12 +114,11 @@ header h1
 
 .after
 {
-
-	margin: 100px;
+	margin: 40px;
 }
 .dis a
 {
-	margin-left: 340px;
+	margin-left: 160px;
 
 }
 
@@ -76,6 +128,9 @@ header h1
 footer{  
     border-radius: 20px;
     border: outset; 
+}
+footer a,p{  
+    font-size: 20px;
 }
 .centrado{
     text-align: center;
@@ -121,4 +176,21 @@ footer{
 .contenido-columnas{
     display: flex;
     justify-content: space-between;
+}
+
+
+
+/*modificaciones de letra*/
+main p,a{
+    font-size: 18px;
+}
+.contenido h3,li{
+    font-size: 18px;
+}
+.detalles{
+    display: flex;
+    justify-content: space-around;
+}
+.referencia a{
+    text-align: center;
 }

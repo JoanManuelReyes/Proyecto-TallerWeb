@@ -134,6 +134,12 @@ span{
     95%{margin-top: -50px;}
     100%{margin-top: 0;}
 }
+main p,li{
+    font-size: 24px;
+}
+
+
+
 .regiones{
     display: flex;
     justify-content: space-around;
@@ -233,10 +239,10 @@ span{
 footer{  
     
     border-radius: 20px;
-    border: outset;
-   
-
-    
+    border: outset; 
+}
+footer a,p{  
+    font-size: 20px;
 }
 
 .tipotabla-iniciar{  
