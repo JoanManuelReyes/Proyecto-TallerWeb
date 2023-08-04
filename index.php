@@ -10,30 +10,31 @@
 	<header>
 		<img  src="Imagenes_header/imagen1.jpeg">
 		<nav>
-		   <a href="index.html">Inicio</a>
-		   <a href="Nosotros.html">¿Quiénes somos?</a>
-		   <a href="paquetes.html">Paquetes de tours</a>
-		   <a href="GuiasTuristicos.html">Nuestros guias</a>
-		   <a href="Contactanos.html">Contactanos</a>
-		   <a href="Ejercicios1JS.html">Ejercicios JS</a>
+		   <a href="index.php">Inicio</a>
+		   <a href="Nosotros.php">¿Quiénes somos?</a>
+		   <a href="paquetes.php">Paquetes de tours</a>
+		   <a href="GuiasTuristicos.php">Nuestros guias</a>
+		   <a href="Contactanos.php">Contactanos</a>
+		   <a href="Ejercicios1JS.php">Ejercicios JS</a>
+		   <a href="EjercicioPHP1.php">Ejercicios PHP</a>
 		</nav>
 		
-			<form method="post" class="form-nav" action="/RegionCosta.html">
+			<form method="post" class="form-nav" action="/RegionCosta.php">
 				<select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
 					<option selected>Departamentos</option>
-					<option value="Cusco.html">Cuzco</option>
+					<option value="Cusco.php">Cuzco</option>
 					<option value="#">Tambopata</option>
 					<option value="#">Apurimac</option>
-					<option value="CostaVerde.html">Lima-Costa Verde</option>
+					<option value="CostaVerde.php">Lima-Costa Verde</option>
 					<option value="#">Ica</option>
 					<option value="#">La Merced</option>
 					<option value="#">Chanchamayo</option>
 					<option value="#">Paracas</option>
-					<option value="Puno.html">Puno</option>
+					<option value="Puno.php">Puno</option>
 				</select>
 			</form>
 
-			<form class="boton" action="/iniciar.html">
+			<form class="boton" action="/iniciar.php">
 				<input type="submit" value="INICIAR">
 			</form>
 		
@@ -63,19 +64,19 @@
 			<div class="regiones__cards">
 			    <img class="regiones__img" src="imagenes/img3.jpg" width="330" height="220">
 				<h3>COSTA</h3>
-				<a href="RegionCosta.html">Conoce más</a> 
+				<a href="RegionCosta.php">Conoce más</a> 
 		    </div>
 
 		    <div class="regiones__cards">
 				<img class="regiones__img" src="imagenes_sierra/Apurimac3.png" width="330" height="220"><br>
 				<H3>SIERRA</H3>
-				<a href="SIERRA.html">Conoce más</a>
+				<a href="SIERRA.php">Conoce más</a>
 		    </div>
 
 		    <div class="regiones__cards">
 				<img class="regiones__img" src="imagenes/img3_selva.jpg" width="330" height="220"><br>
 				<H3>SELVA</H3>
-				<a href="SELVA.html">Conoce más</a>
+				<a href="SELVA.php">Conoce más</a>
 		    </div>
 		</section>
 
@@ -90,7 +91,7 @@
 						La ciudad es un punto de partida hacia las islas Ballestas deshabitadas, hogar de lobos marinos, pelícanos y pingüinos de Humboldt. 
 						La escabrosa Reserva Nacional de Paracas tiene abundante fauna y se extiende por desierto, océano, islas y la península de Paracas.
 					</p>
-					<a href="Paracas.html">Conoce más</a>
+					<a href="Paracas.php">Conoce más</a>
 				</div>
 			
 				
@@ -102,7 +103,7 @@
 						Tomara un sendero de la selva inca desde Cusco a Machu Picchu. En el camino, participará en actividades de aventura
 					    como ciclismo, rafting, tirolesa y senderismo, todo mientras disfruta de las impresionantes vistas de las montañas y ríos peruanos.
 					</p>
-					<a href="Cusco.html">Conoce más</a>
+					<a href="Cusco.php">Conoce más</a>
 				</div>
 				
 					
@@ -116,7 +117,7 @@
 						por el lago Sandoval y emprenda algunas excursiones por la selva. Esta es una gran oportunidad
 						para desconectar y sumergirse en la hermosa naturaleza del Perú durante su viaje
 				    </p>
-				    <a href="Tambopata.html">Conoce más</a>
+				    <a href="Tambopata.php">Conoce más</a>
 				</div>
 		</section>
 
@@ -134,15 +135,15 @@
 
 			<div class="logos-tamaño item-footer padding-nosotros">
 				<h2>CONOCE PERÚ<h2>
-				<a href="Nosotros.html">Sobre Nosotros</a><br>
+				<a href="Nosotros.php">Sobre Nosotros</a><br>
 				<img src="Imagenes_header/facebook.png"><br>
 				<img src="Imagenes_header/youtube.png">
 			</div>
 
 			<div class="item-footer padding-2022">
-				<a href="LibroReclamos.html">Libro de Reclamos</a>
+				<a href="LibroReclamos.php">Libro de Reclamos</a>
 				<p><center>2022 ©</p>
-				<a href="index.html">Andes Fly S.A.</a>
+				<a href="index.php">Andes Fly S.A.</a>
 				<p>. All Rights Reserved</p>
 			</div>	
 		</div>

@@ -9,37 +9,38 @@
 </head>
 <body>
 	<header>
-		<img  src="Imagenes_header/imagen1.jpeg">
-		<nav>
-		   <a href="index.html">Inicio</a>
-		   <a href="Nosotros.html">¿Quiénes somos?</a>
-		   <a href="paquetes.html">Paquetes de tours</a>
-		   <a href="GuiasTuristicos.html">Nuestros guias</a>
-		   <a href="Contactanos.html">Contactanos</a>
-           <a href="Ejercicios1JS.html">Ejercicios JS</a>
-		</nav>
-		
-			<form method="post" class="form-nav" action="/RegionCosta.html">
-				<select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
-					<option selected>Departamentos</option>
-					<option value="Cusco.html">Cuzco</option>
-					<option value="#">Tambopata</option>
-					<option value="#">Apurimac</option>
-					<option value="CostaVerde.html">Lima-Costa Verde</option>
-					<option value="#">Ica</option>
-					<option value="#">La Merced</option>
-					<option value="#">Chanchamayo</option>
-					<option value="#">Paracas</option>
-					<option value="Puno.html">Puno</option>
-				</select>
-			</form>
+        <img  src="Imagenes_header/imagen1.jpeg">
+        <nav>
+           <a href="index.php">Inicio</a>
+           <a href="Nosotros.php">¿Quiénes somos?</a>
+           <a href="paquetes.php">Paquetes de tours</a>
+           <a href="GuiasTuristicos.php">Nuestros guias</a>
+           <a href="Contactanos.php">Contactanos</a>
+           <a href="Ejercicios1JS.php">Ejercicios JS</a>
+           <a href="EjercicioPHP1.php">Ejercicios PHP</a>
+        </nav>
+        
+            <form method="post" class="form-nav" action="/RegionCosta.php">
+                <select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
+                    <option selected>Departamentos</option>
+                    <option value="Cusco.php">Cuzco</option>
+                    <option value="#">Tambopata</option>
+                    <option value="#">Apurimac</option>
+                    <option value="CostaVerde.php">Lima-Costa Verde</option>
+                    <option value="#">Ica</option>
+                    <option value="#">La Merced</option>
+                    <option value="#">Chanchamayo</option>
+                    <option value="#">Paracas</option>
+                    <option value="Puno.php">Puno</option>
+                </select>
+            </form>
 
-			<form class="boton" action="/iniciar.html">
-				<input type="submit" value="INICIAR">
-			</form>
-		
-		
-	</header>
+            <form class="boton" action="/iniciar.php">
+                <input type="submit" value="INICIAR">
+            </form>
+        
+        
+    </header>
 
 	<main>
 		<div class="imagen-slider">
@@ -68,7 +69,7 @@
                         <li>3 días/2 noches - 2 Personas</li>
                         <li>Visitas Guiadas</li>
                         <h3>desde S/.1150</h3>
-                        <a href="CostaVerde.html">Ver Detalle</a>
+                        <a href="CostaVerde.php">Ver Detalle</a>
                     </ul>
                 </div>
             </div>
@@ -84,7 +85,7 @@
                         <li>4 días/3 noches - 2 Personas</li>
                         <li>Visitas Guiadas</li>
                         <h3>desde S/.1730</h3> 
-                        <a href="Huacachina.html">Ver Detalle</a>
+                        <a href="Huacachina.php">Ver Detalle</a>
                     </ul>
                 </div>
             </div>    
@@ -101,7 +102,7 @@
                         <li>3 días/2 noches - 2 Personas</li>
                         <li>Visitas Guiadas</li>
                         <h3>desde S/.850</h3>
-                        <a href="Paracas.html">Ver Detalle</a>
+                        <a href="Paracas.php">Ver Detalle</a>
                         
                     </ul>
                 </div>
@@ -121,15 +122,15 @@
 
             <div class="logos-tamaño item-footer padding-nosotros">
                 <h2>CONOCE PERÚ<h2>
-                <a href="Nosotros.html">Sobre Nosotros</a><br>
+                <a href="Nosotros.php">Sobre Nosotros</a><br>
                 <img src="Imagenes_header/facebook.png"><br>
                 <img src="Imagenes_header/youtube.png">
             </div>
 
             <div class="item-footer padding-2022">
-                <a href="LibroReclamos.html">Libro de Reclamos</a>
+                <a href="LibroReclamos.php">Libro de Reclamos</a>
                 <p><center>2022 ©</p>
-                <a href="index.html">Andes Fly S.A.</a>
+                <a href="index.php">Andes Fly S.A.</a>
                 <p>. All Rights Reserved</p>
             </div>  
         </div>

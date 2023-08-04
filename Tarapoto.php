@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="css/estilo-Rselva.css">
-    <title>Tambopata Tour</title>
+    <title>Tarapoto Tour</title>
     <script type="text/javascript" src="js/IncrementadorPrecio.js"></script>
 </head>
 <body>
     <header>
         <img  src="Imagenes_header/imagen1.jpeg">
         <nav>
-           <a href="index.html">Inicio</a>
-           <a href="Nosotros.html">¿Quiénes somos?</a>
-           <a href="paquetes.html">Paquetes de tours</a>
-           <a href="GuiasTuristicos.html">Nuestros guias</a>
-           <a href="Contactanos.html">Contactanos</a>
-           <a href="Ejercicios1JS.html">Ejercicios JS</a>
+           <a href="index.php">Inicio</a>
+           <a href="Nosotros.php">¿Quiénes somos?</a>
+           <a href="paquetes.php">Paquetes de tours</a>
+           <a href="GuiasTuristicos.php">Nuestros guias</a>
+           <a href="Contactanos.php">Contactanos</a>
+           <a href="Ejercicios1JS.php">Ejercicios JS</a>
+           <a href="EjercicioPHP1.php">Ejercicios PHP</a>
         </nav>
         
-            <form method="post" class="form-nav" action="/RegionCosta.html">
+            <form method="post" class="form-nav" action="/RegionCosta.php">
                 <select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
                     <option selected>Departamentos</option>
-                    <option value="Cusco.html">Cuzco</option>
+                    <option value="Cusco.php">Cuzco</option>
                     <option value="#">Tambopata</option>
                     <option value="#">Apurimac</option>
-                    <option value="CostaVerde.html">Lima-Costa Verde</option>
+                    <option value="CostaVerde.php">Lima-Costa Verde</option>
                     <option value="#">Ica</option>
                     <option value="#">La Merced</option>
                     <option value="#">Chanchamayo</option>
                     <option value="#">Paracas</option>
-                    <option value="Puno.html">Puno</option>
+                    <option value="Puno.php">Puno</option>
                 </select>
             </form>
 
-            <form class="boton" action="/iniciar.html">
+            <form class="boton" action="/iniciar.php">
                 <input type="submit" value="INICIAR">
             </form>
         
@@ -44,13 +45,13 @@
     </header>
     
     <section class="slider-selva">
-        <h1>4 días y 3 noches - Tambopata Jungle</h1>
-        <h5>Madre de Dios Region,Perú</h5>
+        <h1>4 días y 3 noches - Tarapoto Aventurero</h1>
+        <h5>San Martin Region,Perú</h5>
         <div class="recorrido-selva">
             <ul>
-                <li><img src="imagenes_selva/tambopata2.jpg" width="50%" alt=""></li>
-                <li><img src="imagenes_selva/tambopata3.jpg" width="50%" alt=""></li>
-                <li><img src="imagenes_selva/tambopata4.jpg" width="50%" alt=""></a></li>
+                <li><img src="imagenes_selva/tarapoto2.jpg" width="25%" alt=""></li>
+                <li><img src="imagenes_selva/tarapoto3.jpg" width="25%" alt=""></li>
+                <li><img src="imagenes_selva/tarapoto4.jpg" width="25%" alt=""></a></li>
             </ul>
         </div>
     </section>
@@ -58,48 +59,49 @@
         <div class="info__descripcion">
             <h2>Descripcion General</h2>
             <p>
-                Aventúrese en las profundidades de la selva amazónica y explore el diverso Parque Nacional 
-                Tambopata en una excursión de 4 días desde Puerto Maldonado. Descubra la rica biodiversidad de la selva 
-                mientras recorre los paseos nocturnos de los caimanes, visite la Isla de los Monos, navegue
-                 por el lago Sandoval y emprenda algunas excursiones por la selva. Esta es una gran oportunidad
-                  para desconectar y sumergirse en la hermosa naturaleza del Perú durante su viaje
+                Descubre las maravillas naturales, culturales y gastronómicas de Tarapoto y disfruta de impresionantes
+                 escenarios y las mejores actividades con Aventuras en 4 días de recorrido.
             </p>
             <ul>
-                <li>Toma un tour de 4 días por la selva desde Puerto Maldonado al Parque Nacional Tambopata</li>
-                <li>Descubre la fauna y la flora de la selva mientras atraviesas la selva tropical.</li>
-                <li>Disfruta de un viaje sin preocupaciones con este paquete todo incluido de Amazon Jungle</li>
+                <li>4 Noches de alojamiento & 4 desayunos en Tarapoto</li>
+                <li>Guía profesional de turismo</li>
+                <li>Tickets de ingreso a los atractivos turísticos</li>
             </ul>
         </div>
-        <div class="info__itinerario">
+        <div class="info__itinerariot">
             <h2>Itinerario</h2>
             <div>
-               <h2>Dia 1 - Llegada a Puerto Maldonado - Traslado al albergue</h2> 
+               <h2>Dia 1 - Excursion a Lamas Nativo</h2> 
                <p>
-                Llegada al aeropuerto de Puerto Maldonado. Disfruta un -Paseo en bote de 25 minutos hasta el albergue Inkaterra
-                 Hacienda Concepción. Adéntrate en las profundidades de la selva tropical con Concepción Senderos para caminar 
-                 por la jungla y tomar un crucero por el río Crepúsculo como nocturno criaturas despiertas. Noche en el albergue. 
+                Los recogeremos de su hotel para empezar esta excursión por la ciudad de Lamas, ubicada a pocos minutos de la ciudad de Tarapoto. 
+                Nuestro primer punto de visita será el  Castillo de rocas , con  una construcción en medio de la ciudad  y podres observar al rededor de lamas  su esplendor. 
+                También nos dirigimos  al mirador Sheretero  para visualizar desde alli un hermoso paisaje que es la comunidad del barrio Wayku y su alrededores   y poner atención  a cada  
+                 Leyenda que va contando el guía , Y por último, conoceremos la cultura de la comunidad nativa Wayku, quienes nos instruirán acerca de las bondades de sus 
+                 productos como la sangre de grado, la Copaiba, el Sacha inchi, entre otros. 
                </p>
             </div>
             <div>
-                    <h2>Dia 2 - Lago Sandoval</h2>
+                    <h2>Dia 2 - Tour de Alto Mayo</h2>
                         <p>
-                                Camina por la selva tropical y deslízate por el lago cristalino Sandoval. Escale el Inkaterra Canopy Walkway para obtener
-                                una panorámica vistas y observar la actividad secreta de la vida silvestre en la oscuridad 
-                                explorando la selva tropical por la noche. Noche en el albergue.
+                            Lo recogeremos de su hotel entre las 7:30 - 8:00 am para salir de la rumbo a la Ciudad de  Moyobamba . En este lugar, visitaremos el orquideario (colección de orquídeas)
+                             de la ciudad, donde un guía nos llevará por las instalaciones y nos dará más información sobre estas flores. Luego, visitaremos la Ciudad de  Rioja , lugar donde conoceremos el nacimiento del río Tioyacu, 
+                             donde tendremos la posibilidad de refrescarnos y darnos un baño placentero  también  dar un paseo por las áreas verdes del lugar, apto para los visitantes  . Luego, visitaremos Chakra Vieja 
+                             donde podremos degustar tragos típicos de la región. Una vez finalizado el circuito, tomaremos nuestro vehículo para regresar a Tarapoto y finalizar el recorrido.      
                         </p>
             </div>
             <div>
-                <h2>Dia 3 - Pesca</h2>
+                <h2>Dia 3 - Cataratas del salto de la Bruja</h2>
                 <p>
-                    Descubre muchas de las plantas tropicales de la selva. de cerca en nuestro bio-huerto orgánico seguido
-                    de una visita a Palmetum, una colección de 19 palmeras amazónicas. Remar en un cocha, un lago con arco de buey y pesca
-                    de pirañas. Visita al interior Collpa. Noche en el albergue.
+                    Aproximadamente eso de  las 08:30 am - 09:00 am, pasaremos a recogerlo de su respectivo hotel para iniciar con el recorrido. Nos dirigiremos por la carretera de Yurimaguas y haremos una parada en el Km 39. 
+                    En este punto iniciaremos con una caminata de aproximadamente 30 minutos hasta las caídas de agua del Salto de la Bruja, podremos disfrutar de las 4 caídas de agua donde podrás relajarte y bañarte para luego realizar el descenso. 
+                    Luego de que nuestro guía pueda dar la explicación sobre la geografía e historia de la zona, podrás disfrutar de un almuerzo en un restaurante de la localidad, para finalmente retornar a la ciudad de  Tarapoto 
+                    luego de a ver tenido una hermosa aventura en la catarata del Salto De La Bruja .  
                 </p>
             </div>
             <div>
-                <h2>Dia 4 - Regreso a Puerto Maldonado </h2>
+                <h2>Dia 4 - Traslado de Hotel - Aeropuerto Guillermo del Castillo Paredes </h2>
                 <p>
-                    Salga en bote desde su albergue junto al río, visitando un Casa de las Mariposas antes de tu vuelo de salida desde Puerto Maldonado.
+                    Nos dirijiremos a recogerlo de su hotel para posterior llevarlo al aeropuerto apra su regreso a Lima.
                      ¡Fin de nuestro servicio! 
                 </p>
             </div>
@@ -159,7 +161,7 @@
                         <h2>Total</h2>
                         <div class="modificador">
                             <div class="preciof">
-                                <p>S/.</p><p id="preciofinal" value="">870</p>
+                                <p>S/.</p><p id="preciofinal" value="">940</p>
                             </div>
                         </div>
                     </div>
@@ -167,10 +169,9 @@
             </div>
 
 
-
         <section class="reserva">
             <h2>¿TE GUSTO EL TOUR?</h2>
-            <a href="Reservar.html">Reserva ahora mismo</a>
+            <a href="Reservar.php">Reserva ahora mismo</a>
         </section>
     </section>
 <footer id="pie" class="centrado">
@@ -185,19 +186,20 @@
 
             <div class="logos-tamaño item-footer padding-nosotros">
                 <h2>CONOCE PERÚ<h2>
-                <a href="Nosotros.html">Sobre Nosotros</a><br>
+                <a href="Nosotros.php">Sobre Nosotros</a><br>
                 <img src="Imagenes_header/facebook.png"><br>
                 <img src="Imagenes_header/youtube.png">
             </div>
 
             <div class="item-footer padding-2022">
-                <a href="LibroReclamos.html">Libro de Reclamos</a>
+                <a href="LibroReclamos.php">Libro de Reclamos</a>
                 <p><center>2022 ©</p>
-                <a href="index.html">Andes Fly S.A.</a>
+                <a href="index.php">Andes Fly S.A.</a>
                 <p>. All Rights Reserved</p>
             </div>  
         </div>
 
     </footer>
+    
 </body>
 </html>

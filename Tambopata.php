@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="css/estilo-Rselva.css">
-    <title>Tour Chanchamayo</title>
+    <title>Tambopata Tour</title>
     <script type="text/javascript" src="js/IncrementadorPrecio.js"></script>
 </head>
 <body>
     <header>
         <img  src="Imagenes_header/imagen1.jpeg">
         <nav>
-           <a href="index.html">Inicio</a>
-           <a href="Nosotros.html">¿Quiénes somos?</a>
-           <a href="paquetes.html">Paquetes de tours</a>
-           <a href="GuiasTuristicos.html">Nuestros guias</a>
-           <a href="Contactanos.html">Contactanos</a>
-           <a href="Ejercicios1JS.html">Ejercicios JS</a>
+           <a href="index.php">Inicio</a>
+           <a href="Nosotros.php">¿Quiénes somos?</a>
+           <a href="paquetes.php">Paquetes de tours</a>
+           <a href="GuiasTuristicos.php">Nuestros guias</a>
+           <a href="Contactanos.php">Contactanos</a>
+           <a href="Ejercicios1JS.php">Ejercicios JS</a>
+           <a href="EjercicioPHP1.php">Ejercicios PHP</a>
         </nav>
         
-            <form method="post" class="form-nav" action="/RegionCosta.html">
+            <form method="post" class="form-nav" action="/RegionCosta.php">
                 <select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
                     <option selected>Departamentos</option>
-                    <option value="Cusco.html">Cuzco</option>
+                    <option value="Cusco.php">Cuzco</option>
                     <option value="#">Tambopata</option>
                     <option value="#">Apurimac</option>
-                    <option value="CostaVerde.html">Lima-Costa Verde</option>
+                    <option value="CostaVerde.php">Lima-Costa Verde</option>
                     <option value="#">Ica</option>
                     <option value="#">La Merced</option>
                     <option value="#">Chanchamayo</option>
                     <option value="#">Paracas</option>
-                    <option value="Puno.html">Puno</option>
+                    <option value="Puno.php">Puno</option>
                 </select>
             </form>
 
-            <form class="boton" action="/iniciar.html">
+            <form class="boton" action="/iniciar.php">
                 <input type="submit" value="INICIAR">
             </form>
         
@@ -44,13 +45,13 @@
     </header>
     
     <section class="slider-selva">
-        <h1>4 días y 3 noches - Chanchamayo Aventurero</h1>
-        <h5>Junin Region,Perú</h5>
+        <h1>4 días y 3 noches - Tambopata Jungle</h1>
+        <h5>Madre de Dios Region,Perú</h5>
         <div class="recorrido-selva">
             <ul>
-                <li><img src="imagenes_selva/chanchamayo2.jpg" width="25%" alt=""></li>
-                <li><img src="imagenes_selva/chanchamayo3.jpg" width="25%" alt=""></li>
-                <li><img src="imagenes_selva/chanchamayo4.jpg" width="25%" alt=""></li>
+                <li><img src="imagenes_selva/tambopata2.jpg" width="50%" alt=""></li>
+                <li><img src="imagenes_selva/tambopata3.jpg" width="50%" alt=""></li>
+                <li><img src="imagenes_selva/tambopata4.jpg" width="50%" alt=""></a></li>
             </ul>
         </div>
     </section>
@@ -58,42 +59,48 @@
         <div class="info__descripcion">
             <h2>Descripcion General</h2>
             <p>
-                Luego de viajar por la Carretera Central y tomar el desvío a Tarma, podrá llegar en 6 horas, desde Lima, 
-                a estos valles ubicados en zonas de selva alta con exuberante vegetación y rodeado de bosques de rica y variada fauna y vegetación.
+                Aventúrese en las profundidades de la selva amazónica y explore el diverso Parque Nacional 
+                Tambopata en una excursión de 4 días desde Puerto Maldonado. Descubra la rica biodiversidad de la selva 
+                mientras recorre los paseos nocturnos de los caimanes, visite la Isla de los Monos, navegue
+                 por el lago Sandoval y emprenda algunas excursiones por la selva. Esta es una gran oportunidad
+                  para desconectar y sumergirse en la hermosa naturaleza del Perú durante su viaje
             </p>
             <ul>
-                <li>Excursiones mencionadas en el itinerario</li>
-                <li>Entradas a los atractivos a visitar</li>
-                <li>Guiado profesional en español o inglés</li>
+                <li>Toma un tour de 4 días por la selva desde Puerto Maldonado al Parque Nacional Tambopata</li>
+                <li>Descubre la fauna y la flora de la selva mientras atraviesas la selva tropical.</li>
+                <li>Disfruta de un viaje sin preocupaciones con este paquete todo incluido de Amazon Jungle</li>
             </ul>
         </div>
         <div class="info__itinerario">
             <h2>Itinerario</h2>
             <div>
-               <h2>Dia 1 - La Merced</h2> 
+               <h2>Dia 1 - Llegada a Puerto Maldonado - Traslado al albergue</h2> 
                <p>
-                10:00 hr. Nos trasladaremos hacia el distrito de San Ramón donde realizaremos una caminata de 30 minutos aproximadamente para llegar a la Catarata el Tirol donde podremos disfrutar de un refrescante baño.
-                Por la tarde visitaremos Zhaveta Yard, observaremos el mariposario, el mini zoológico y las variedades de plantas (medicinales, ornamentales, orquídeas y otros),
-                Visita a la Plaza de Armas de La Merced y el Mirador de la Cruz de Chanchamayo.
+                Llegada al aeropuerto de Puerto Maldonado. Disfruta un -Paseo en bote de 25 minutos hasta el albergue Inkaterra
+                 Hacienda Concepción. Adéntrate en las profundidades de la selva tropical con Concepción Senderos para caminar 
+                 por la jungla y tomar un crucero por el río Crepúsculo como nocturno criaturas despiertas. Noche en el albergue. 
                </p>
             </div>
             <div>
-                    <h2>Dia 2 - Valle del Perene</h2>
+                    <h2>Dia 2 - Lago Sandoval</h2>
                         <p>
-                            09:45 hr. Comenzando con nuestro recorrido apreciaremos el Perfil del Nativo Dormido. Conoceremos el nacimiento del Valle del Perené (confluencias de ríos), luego nos dirigiremos hacia Puerto Yurinaki donde después de una breve caminata, atravesaremos el Puente Colgante Victoria.
-                            Conoceremos la Catarata Velo de Novia con sus 65 metros de caída y la Catarata Bayoz con sus múltiples piscinas naturales ideales para un refrescante chapuzón en sus cristalinas aguas.
-                            Nos dirigiremos Puerto Chirani donde realizaremos paseo en bote por el río Perené
-                            Intercambio cultural en la Comunidad Nativa Asháninka Pampa Michi.
-                            Visita a Chanchamayo Highland planta procesadora productos de la zona café, cacao, cítricos y otras variedades de productos, degustación gratuita (tragos, jugos, café etc.).
-    
-         
+                                Camina por la selva tropical y deslízate por el lago cristalino Sandoval. Escale el Inkaterra Canopy Walkway para obtener
+                                una panorámica vistas y observar la actividad secreta de la vida silvestre en la oscuridad 
+                                explorando la selva tropical por la noche. Noche en el albergue.
                         </p>
             </div>
-           
             <div>
-                <h2>Dia 3 - Traslado a la merced terminal terrerstre </h2>
+                <h2>Dia 3 - Pesca</h2>
                 <p>
-                    Nos dirijiremos a recogerlo de su hotel en tarnma para posterior llevarlo hacia la merced y luego llevarlo al terminal terrestre para su regreso a Lima.
+                    Descubre muchas de las plantas tropicales de la selva. de cerca en nuestro bio-huerto orgánico seguido
+                    de una visita a Palmetum, una colección de 19 palmeras amazónicas. Remar en un cocha, un lago con arco de buey y pesca
+                    de pirañas. Visita al interior Collpa. Noche en el albergue.
+                </p>
+            </div>
+            <div>
+                <h2>Dia 4 - Regreso a Puerto Maldonado </h2>
+                <p>
+                    Salga en bote desde su albergue junto al río, visitando un Casa de las Mariposas antes de tu vuelo de salida desde Puerto Maldonado.
                      ¡Fin de nuestro servicio! 
                 </p>
             </div>
@@ -106,7 +113,7 @@
                         <p>Cantidad mínima de personas:</p>
                         <p id="personasIniciales" value="">2</p>
                         <p>Cantidad mínima de días:</p>
-                        <p id="diasIniciales" value="">3</p>
+                        <p id="diasIniciales" value="">4</p>
                         <h2>Importante:</h2>
                         <p>La cantidad de noches siempre es un valor anterior al de la cantidad de días.</p>
                         </div>
@@ -140,7 +147,7 @@
                         </button>
 
                         <div class="valor">
-                            <p id="acumulado2" value="">3</p>
+                            <p id="acumulado2" value="">4</p>
                         </div>
 
                         <button onclick="botonDias(this)" value="aumentar">
@@ -153,16 +160,18 @@
                         <h2>Total</h2>
                         <div class="modificador">
                             <div class="preciof">
-                                <p>S/.</p><p id="preciofinal" value="">740</p>
+                                <p>S/.</p><p id="preciofinal" value="">870</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+
         <section class="reserva">
             <h2>¿TE GUSTO EL TOUR?</h2>
-            <a href="Reservar.html">Reserva ahora mismo</a>
+            <a href="Reservar.php">Reserva ahora mismo</a>
         </section>
     </section>
 <footer id="pie" class="centrado">
@@ -177,15 +186,15 @@
 
             <div class="logos-tamaño item-footer padding-nosotros">
                 <h2>CONOCE PERÚ<h2>
-                <a href="Nosotros.html">Sobre Nosotros</a><br>
+                <a href="Nosotros.php">Sobre Nosotros</a><br>
                 <img src="Imagenes_header/facebook.png"><br>
                 <img src="Imagenes_header/youtube.png">
             </div>
 
             <div class="item-footer padding-2022">
-                <a href="LibroReclamos.html">Libro de Reclamos</a>
+                <a href="LibroReclamos.php">Libro de Reclamos</a>
                 <p><center>2022 ©</p>
-                <a href="index.html">Andes Fly S.A.</a>
+                <a href="index.php">Andes Fly S.A.</a>
                 <p>. All Rights Reserved</p>
             </div>  
         </div>
