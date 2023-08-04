@@ -8,41 +8,10 @@
 	<title></title>
 </head>
 <body>
-	<header>
-		<img  src="../../Imagenes_header/imagen1.jpeg">
-		<nav>
-		   <a href="../../index.php">Inicio</a>
-		   <a href="../../Nosotros.php">¿Quiénes somos?</a>
-		   <a href="../../paquetes.php">Paquetes de tours</a>
-		   <a href="../../GuiasTuristicos.php">Nuestros guias</a>
-		   <a href="../../Contactanos.php">Contactanos</a>
-		   <a href="../../Ejercicios1JS.php">Ejercicios JS</a>
-		   <a href="../../EjercicioPHP1.php">Ejercicios PHP</a>
-		   <a href="../../administrador.php">Administrador</a>
-		</nav>
-		
-			<form method="post" class="form-nav" action="../../RegionCosta.php">
-				<select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
-					<option selected>Departamentos</option>
-					<option value="Cusco.php">Cuzco</option>
-					<option value="#">Tambopata</option>
-					<option value="#">Apurimac</option>
-					<option value="CostaVerde.php">Lima-Costa Verde</option>
-					<option value="#">Ica</option>
-					<option value="#">La Merced</option>
-					<option value="#">Chanchamayo</option>
-					<option value="#">Paracas</option>
-					<option value="Puno.php">Puno</option>
-				</select>
-			</form>
-
-			<form class="boton" action="../../iniciar.php">
-				<input type="submit" value="INICIAR">
-			</form>
-		
-		
-	</header>
-
+	<?php 
+	include '../../header/header3_Administrador.php';
+	?>
+	
 	<main>
 	<?php
 		require '../../controlador/conexion.php';
@@ -52,39 +21,53 @@
 	?>
 	<div class="centrado card_reclamos">
 	<form action="../../procesamiento_administrador/proceso_reclamo.php" method="post" onsubmit=" return validarInputs()">
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Codigo Reclamo:</label>
+		<div class="separardor_reclamo">
+		<label>Codigo Reclamo:</label><br>
 		<input type="text" name="codigo" id="codigo" value="<?=$codigo[0]?>"><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Boleto de Reserva:</label>
-		<select name="boleto" id="boleto">
-			<?php
-			foreach (listarBoleto($conn) as $key => $value) {
-			?>
-				<option value="<?=$value[0]?>"><?=$value[0]?></option>
-			<?php
-				}
-			?>
-		</select><br>
+		<div class="separardor_reclamo">
+		<label>Boleto de Reserva:</label><br>
+		<input type="text" name="boleto" id="boleto"><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>DNI del Cliente:</label>
-		<select name="DNI" id="DNI">
-			<?php
-			foreach (listarCliente($conn) as $key => $value) {
-			?>
-				<option value="<?=$value[0]?>"><?=$value[0]?></option>
-			<?php
-				}
-			?>
-		</select><br>
+		<div class="separardor_reclamo">
+		<label>Fecha de Vuelo:</label><br>
+		<input type="date" name="fecha" id="fecha" placeholder="(Año-Mes-Día)"><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Descripción:</label>
+		<div class="separardor_reclamo">
+		<label>Nombre:</label><br>
+		<input type="text" name="nombre" id="nombre"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>Apellido:</label><br>
+		<input type="text" name="apellido" id="apellido"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>DNI del Cliente:</label><br>
+		<input type="text" name="DNI" id="DNI"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>Teléfono del Cliente:</label><br>
+		<input type="text" name="telefono" id="telefono"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>Email del Cliente:</label><br>
+		<input type="email" name="email" id="email"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>Dirección del Cliente:</label><br>
+		<input type="text" name="direccion" id="direccion"><br>
+		</div>
+
+		<div class="separardor_reclamo">
+		<label>Descripción:</label><br>
 		<textarea name="descripcion" id="descripcion" placeholder="Describe aqui tu reclamo..."></textarea><br>
 		</div>
 		<div class="diseñoEnviar">
@@ -96,7 +79,13 @@
 	function validarInputs(){
         let codigo=document.getElementById('codigo').value;
         let boleto=document.getElementById('boleto').value;
+        let fecha=document.getElementById('fecha').value;
+        let nombre=document.getElementById('nombre').value;
+        let apellido=document.getElementById('apellido').value;
         let dni=document.getElementById('DNI').value;
+        let telefono=document.getElementById('telefono').value;
+        let email=document.getElementById('email').value;
+        let direccion=document.getElementById('direccion').value;     
         let des=document.getElementById('descripcion').value;
 
 
@@ -104,12 +93,34 @@
         alert("Complete bien el codigo");
         return false;
         }
-        else if(boleto===""){
-            alert("Seleccione un boleto")
+        else if(isNaN(boleto)||boleto===""){
+            alert("Escriba un número de boleto")
             return false;
         }
-         else if(dni===""){
-          alert("Seleccione un DNI del cliente");
+         else if(fecha===""){
+          alert("Escriba una fecha");
+          return false;
+        }
+        else if(nombre===""){
+          alert("Escriba el nombre del cliente");
+          return false;
+        }
+        else if(apellido===""){
+          alert("Escriba el apellido del cliente");
+          return false;
+        }
+        else if(isNaN(dni)||dni===""){
+          alert("Escriba un DNI del cliente");
+          return false;
+        }
+        else if(isNaN(telefono)||telefono===""){
+          alert("Escriba el teléfono del cliente");
+          return false;
+        }else if(email===""){
+          alert("Escriba el email del cliente");
+          return false;
+        }else if(direccion===""){
+          alert("Escriba la dirección del cliente");
           return false;
         }
          else if(des==="")  {
@@ -119,59 +130,10 @@
         
     }
 	</script>
-
-
-	<div class="centrado">
-	<p>Elige un Número de Boleto y DNI del cliente que esten relacionados en la tabla de reserva</p>
-		<div class="tabla">
-			<table border="black">
-				<tr>
-					<th>Boleto de Reserva</th>
-					<th>DNI del Cliente</th>
-				</tr>
-				<?php
-				foreach (listarBoleto($conn) as $key => $value) {
-				?>
-				<tr>
-					<td><?=$value[0]?></td>
-					<td><?=$value[1]?></td>
-				</tr>
-				<?php
-				}
-				?>
-			</table>
-		</div>
-	</div>
-	<div class="centrado reclamo_boton">
-		<a href="../../administrador.php">Volver</a><br>
-	</div>
 	</main>
 
-	<footer id="pie" class="centrado">
-
-		<div class="contenido-columnas">
-			<div class="item-footer padding-direccion">
-				<h2>DIRECCIÓN</h2>
-				<p>Av. Arequipa 1480,Cercado de Lima, Provincia de Lima</p>
-				<p>+51 945 654 321</p>
-				<p>informaciones@andesfly.com | derechosrecervadors@andesfly.com</p>
-			</div>
-
-			<div class="logos-tamaño item-footer padding-nosotros">
-				<h2>CONOCE PERÚ<h2>
-				<a href="Nosotros.php">Sobre Nosotros</a><br>
-				<img src="../../Imagenes_header/facebook.png"><br>
-				<img src="../../Imagenes_header/youtube.png">
-			</div>
-
-			<div class="item-footer padding-2022">
-				<a href="../../LibroReclamos.php">Libro de Reclamos</a>
-				<p><center>2022 ©</p>
-				<a href="../../index.php">Andes Fly S.A.</a>
-				<p>. All Rights Reserved</p>
-			</div>	
-		</div>
-
-	</footer>
+	<?php 
+	include '../../footer/footer3_Administrador.php';
+	?>
 </body>
 </html>

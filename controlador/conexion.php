@@ -5,10 +5,28 @@ function conectar() {
     return $conn; 
 }
 
+//metodos para loguearse
+function validarLogueo($correo,$contra,$conn){
+    $sql="select * from login where email='$correo' and contrasenia='$contra'";
+    $res= mysqli_query($conn, $sql);
+    $filas = mysqli_num_rows($res);
+    return $filas; 
+}
+
+function obtenertipoLogueo($correo,$contra,$conn){
+    $sql="select * from login where email='$correo' and contrasenia='$contra'";
+    $res= mysqli_query($conn, $sql);
+    $vec=array();
+    if(mysqli_num_rows($res)>0){
+        $vec= mysqli_fetch_array($res);
+    }
+    return $vec; 
+}
+
 
 //metodos para CRUD Reclamos
-function agregarReclamo($cod,$nrobol,$dni,$des,$conn){
-    $sql="insert into Reclamo values('$cod','$nrobol','$dni','$des')";   
+function agregarReclamo($cod,$nrobol,$fecha,$nombre,$apellido,$dni,$telefono,$email,$dir,$des,$conn){
+    $sql="insert into Reclamo values('$cod','$nrobol','$fecha','$nombre','$apellido','$dni','$telefono','$email','$dir','$des')";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
@@ -17,13 +35,13 @@ function eliminarReclamo($cod,$conn){
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
-function actualizarReclamo($cod,$nrobol,$dni,$des,$conn){
-    $sql="update Reclamo set Reservar_Nro_Boleto_reservar='$nrobol', Cliente_DNI_cliente='$dni', Descripcion_reclamo='$des' where Codigo_Reclamo='$cod'";   
+function actualizarReclamo($cod,$nrobol,$fecha,$nombre,$apellido,$dni,$telefono,$email,$dir,$des,$conn){
+    $sql="update Reclamo set Nro_boleto='$nrobol',Fecha_vuelo='$fecha',Nombre_cliente='$nombre',Apellido_cliente='$apellido',DNI='$dni',Telefono_cliente='$telefono',Email_cliente='$email',Direccion_cliente='$dir', Descripcion_reclamo='$des' where Codigo_Reclamo='$cod'";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
 function buscarReclamo($cod,$conn){
-    $sql="select Reservar_Nro_Boleto_reservar,Cliente_DNI_cliente,Descripcion_reclamo from Reclamo where Codigo_Reclamo='$cod'";
+    $sql="select Nro_boleto,Fecha_vuelo,Nombre_cliente,Apellido_cliente,DNI,Telefono_cliente,Email_cliente,Direccion_cliente,Descripcion_reclamo from Reclamo where Codigo_Reclamo='$cod'";
     $res= mysqli_query($conn, $sql);
     $vec=array();
     if(mysqli_num_rows($res)>0){
@@ -71,8 +89,8 @@ function listarCliente($conn){
 
 
 //metodos para CRUD contactarse
-function agregarContacto($id,$dni,$snt,$mns,$conn){
-    $sql="insert into contactarse values('$id','$dni','$snt','$mns')";   
+function agregarContacto($id,$nombre,$email,$tel,$dni,$snt,$mns,$conn){
+    $sql="insert into Contactarse values('$id','$nombre','$email','$tel','$dni','$snt','$mns')";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
@@ -81,12 +99,12 @@ function eliminarContacto($id,$conn){
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
-function actualizarContacto($id,$dni,$snt,$mns,$conn){
-    $sql="update contactarse set Cliente_DNI_cliente='$dni', Asunto_contactarse='$snt', Descripcion_contactarse='$mns' where ID_contactarse='$id'";   
+function actualizarContacto($id,$nombre,$email,$tel,$dni,$snt,$mns,$conn){
+    $sql="update contactarse set Nombre='$nombre',Email='$email',Telefono='$tel',DNI='$dni', Asunto_contactarse='$snt', Descripcion_contactarse='$mns' where ID_contactarse='$id'";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 function buscarContacto($id,$conn){
-    $sql="select Cliente_DNI_cliente, Asunto_contactarse, Descripcion_contactarse from contactarse where ID_contactarse='$id'";
+    $sql="select Nombre,Email,Telefono,DNI, Asunto_contactarse, Descripcion_contactarse from contactarse where ID_contactarse='$id'";
     $res= mysqli_query($conn, $sql);
     $vec=array();
     if(mysqli_num_rows($res)>0){
@@ -190,7 +208,7 @@ function conectarboleto($conn) {
 }
 
 function agregarBoleto($bol,$dni,$paq,$tar,$nrotar,$cvc,$fech,$conn){
-    $sql="insert into reservar values('$bol','$dni','$paq','$tar','$nrotar','$cvc','$fech')";
+    $sql="insert into Reservar values('$bol','$dni','$paq','$tar','$nrotar','$cvc','$fech')";
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
@@ -235,8 +253,8 @@ function listarPaquetesTour($conn){
 
 
 //metodos para el CRUD de paquetes de tours
-function agregarTour($id,$nom,$reg,$des,$ft,$canpr,$cands,$pr,$guia,$conn){
-    $sql="insert into Paquete_Tour values('$id','$nom','$reg','$des','$ft','$canpr','$cands','$pr','$guia')";   
+function agregarTour($id,$nom,$reg,$des,$ft,$cands,$pr,$guia,$conn){
+    $sql="insert into Paquete_Tour values('$id','$nom','$reg','$des','$ft','$cands','$pr','$guia')";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
@@ -245,19 +263,19 @@ function eliminarTour($id,$conn){
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
-function actualizarTodoTour($id,$nom,$reg,$des,$ft,$canpr,$cands,$pr,$guia,$conn){
-    $sql="update Paquete_Tour set Nombre_tour='$nom', Region_tour='$reg', Descripcion_tour='$des', Foto_tour='$ft', Cantidad_personas_tour='$canpr', Cantidad_dias_tour='$cands', Precio_tour='$pr', Guia_ID_guia='$guia' where Codigo_tour='$id'";   
+function actualizarTodoTour($id,$nom,$reg,$des,$ft,$cands,$pr,$guia,$conn){
+    $sql="update Paquete_Tour set Nombre_tour='$nom', Region_tour='$reg', Descripcion_tour='$des', Foto_tour='$ft', Cantidad_dias_tour='$cands', Precio_tour='$pr', Guia_ID_guia='$guia' where Codigo_tour='$id'";   
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
-function actualizarTour($id,$nom,$reg,$des,$canpr,$cands,$pr,$guia,$conn){
-    $sql="update Paquete_Tour set Nombre_tour='$nom', Region_tour='$reg', Descripcion_tour='$des', Cantidad_personas_tour='$canpr', Cantidad_dias_tour='$cands', Precio_tour='$pr', Guia_ID_guia='$guia' where Codigo_tour='$id'"; 
+function actualizarTour($id,$nom,$reg,$des,$cands,$pr,$guia,$conn){
+    $sql="update Paquete_Tour set Nombre_tour='$nom', Region_tour='$reg', Descripcion_tour='$des', Cantidad_dias_tour='$cands', Precio_tour='$pr', Guia_ID_guia='$guia' where Codigo_tour='$id'"; 
     mysqli_query($conn, $sql) or die(mysqli_error($conn));
 }
 
 
 function buscarTour($id,$conn){
-    $sql="select Nombre_tour, Region_tour, Descripcion_tour, Cantidad_personas_tour, Cantidad_dias_tour, Precio_tour, Guia_ID_guia from Paquete_Tour where Codigo_tour='$id'";
+    $sql="select Nombre_tour, Region_tour, Descripcion_tour, Cantidad_dias_tour, Precio_tour, Guia_ID_guia from Paquete_Tour where Codigo_tour='$id'";
     $res= mysqli_query($conn, $sql);
     $vec=array();
     if(mysqli_num_rows($res)>0){
@@ -283,5 +301,70 @@ function buscarCodigoDisponibleTour($conn){
     }
     return $vec; 
 }
+
+
+
+
+//metodos para CRUD login
+function agregarUsuario($id,$email,$contra,$conn){
+    $sql="insert into Login values('$id','$email','$contra','Cliente')";   
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
+}
+
+function eliminarUsuario($id,$conn){
+    $sql="delete from Login where id_login='$id'";    
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
+}
+
+function actualizarUsuario($id,$email,$contra,$conn){
+    $sql="update Login set email='$email',contrasenia='$contra' where id_login='$id'";   
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
+}
+function buscarUsuario($id,$conn){
+    $sql="select email,contrasenia from Login where id_login='$id'";
+    $res= mysqli_query($conn, $sql);
+    $vec=array();
+    if(mysqli_num_rows($res)>0){
+        $vec= mysqli_fetch_array($res);
+    }
+    return $vec; 
+}
+function listarUsuario($conn){
+    $sql="select * from Login"; 
+    $res= mysqli_query($conn, $sql);
+    $vec=array();
+    while($f= mysqli_fetch_array($res))  
+        $vec[]=$f;
+    return $vec;
+}
+
+function buscarCodigoDisponibleUsuario($conn){
+    $sql="select ifnull(max(id_login),0)+1 from Login";
+    $res= mysqli_query($conn, $sql);
+    $vec=array();
+    if(mysqli_num_rows($res)>0){
+        $vec= mysqli_fetch_array($res);
+    }
+    return $vec; 
+}
+
+
+
+//Crear Cuenta
+function crearCuenta($nombre,$apellido,$dni,$telefono,$email,$direccion,$contra,$conn){
+    $sql="call spcrearcuenta('$nombre','$apellido','$dni','$telefono','$email','$direccion','$contra')";   
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
+}
+
+function buscarCliente($email,$conn){
+    $sql="select Nombre_cliente, Apellido_cliente from cliente where email_cliente='$email'";
+    $res= mysqli_query($conn, $sql);
+    $vec=array();
+    if(mysqli_num_rows($res)>0){
+        $vec= mysqli_fetch_array($res);
+    }
+    return $vec; 
+}
+
 
 ?>

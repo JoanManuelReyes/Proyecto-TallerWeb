@@ -8,40 +8,9 @@
 	<title></title>
 </head>
 <body>
-	<header>
-		<img  src="../../Imagenes_header/imagen1.jpeg">
-		<nav>
-		   <a href="../../index.php">Inicio</a>
-		   <a href="../../Nosotros.php">¿Quiénes somos?</a>
-		   <a href="../../paquetes.php">Paquetes de tours</a>
-		   <a href="../../GuiasTuristicos.php">Nuestros guias</a>
-		   <a href="../../Contactanos.php">Contactanos</a>
-		   <a href="../../Ejercicios1JS.php">Ejercicios JS</a>
-		   <a href="../../EjercicioPHP1.php">Ejercicios PHP</a>
-		   <a href="../../administrador.php">Administrador</a>
-		</nav>
-		
-			<form method="post" class="form-nav" action="../../RegionCosta.php">
-				<select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
-					<option selected>Departamentos</option>
-					<option value="Cusco.php">Cuzco</option>
-					<option value="#">Tambopata</option>
-					<option value="#">Apurimac</option>
-					<option value="CostaVerde.php">Lima-Costa Verde</option>
-					<option value="#">Ica</option>
-					<option value="#">La Merced</option>
-					<option value="#">Chanchamayo</option>
-					<option value="#">Paracas</option>
-					<option value="Puno.php">Puno</option>
-				</select>
-			</form>
-
-			<form class="boton" action="../../iniciar.php">
-				<input type="submit" value="INICIAR">
-			</form>
-		
-		
-	</header>
+	<?php 
+	include '../../header/header3_Administrador.php';
+	?>
 
 	<main>
 	<?php 
@@ -54,9 +23,9 @@
 	<form action="../../procesamiento_administrador/proceso_reservar.php" method="post" onsubmit=" return validarInputs()">
 		<input type="hidden" name="boleto" value="<?=$bol?>"><br>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>DNI del Cliente:</label>
-		<select name="dni">
+		<div class="separardor_reclamo">
+		<label>DNI del Cliente:</label><br>
+		<select class="tamañoletraIngreso" name="dni">
 			<?php
 				foreach (listarCliente($conn) as $key => $value) {
 					if($value[0]===$datos[0]){
@@ -70,13 +39,13 @@
 		</select><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Codigo del Paquete de Tour:</label>
-		<select name="paquete">
+		<div class="separardor_reclamo">
+		<label>Codigo del Paquete de Tour:</label><br>
+		<select class="tamañoletraIngreso" name="paquete">
 			<?php
 				foreach (listarPaquetesTour($conn) as $key => $value) {
 					if($value[0]===$datos[1]){
-						echo '<option value="'.$value[0].'" selected="">'.$value[0].'-'.$value[1].'<</option>';
+						echo '<option value="'.$value[0].'" selected="">'.$value[0].'-'.$value[1].'</option>';
 					}
 					else{
 						echo '<option value="'.$value[0].'">'.$value[0].'-'.$value[1].'</option>';
@@ -86,9 +55,9 @@
 		</select><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Tarjeta:</label>
-		<select name="tarjeta">
+		<div class="separardor_reclamo">
+		<label>Tarjeta:</label><br>
+		<select class="tamañoletraIngreso" name="tarjeta">
 			<?php
 				foreach (listarTarjeta($conn) as $key => $value) {
 					if($value[0]===$datos[2]){
@@ -102,19 +71,19 @@
 		</select><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Nro. de Tarjeta</label>
+		<div class="separardor_reclamo">
+		<label>Nro. de Tarjeta</label><br>
 		<input type="text" name="nrotarjeta" id="nrotarjeta" value="<?=$datos[3]?>"><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>CVC</label>
+		<div class="separardor_reclamo">
+		<label>CVC</label><br>
 		<input type="text" name="cvc" id="cvc" value="<?=$datos[4]?>"><br>
 		</div>
 
-		<div class="contenidoColumnas separardor_reclamo">
-		<label>Fecha de Reserva</label>
-		<input type="text" name="fecha" id="fecha" value="<?=$datos[5]?>"><br>
+		<div class="separardor_reclamo">
+		<label>Fecha de Reserva</label><br>
+		<input type="date" name="fecha" id="fecha" value="<?=$datos[5]?>"><br>
 		</div>
 
 		<div class="diseñoEnviar">
@@ -124,7 +93,7 @@
 	</div>
 
 	<div class="centrado reclamo_boton">
-		<a href="../../administrador.php">Volver</a><br>
+		<a href="../../paginas/administrador.php">Volver</a><br>
 	</div>
 	<script>
 	function validarInputs(){
@@ -150,31 +119,8 @@
 	</script>
 	</main>
 
-	<footer id="pie" class="centrado">
-
-		<div class="contenido-columnas">
-			<div class="item-footer padding-direccion">
-				<h2>DIRECCIÓN</h2>
-				<p>Av. Arequipa 1480,Cercado de Lima, Provincia de Lima</p>
-				<p>+51 945 654 321</p>
-				<p>informaciones@andesfly.com | derechosrecervadors@andesfly.com</p>
-			</div>
-
-			<div class="logos-tamaño item-footer padding-nosotros">
-				<h2>CONOCE PERÚ<h2>
-				<a href="Nosotros.php">Sobre Nosotros</a><br>
-				<img src="../../Imagenes_header/facebook.png"><br>
-				<img src="../../Imagenes_header/youtube.png">
-			</div>
-
-			<div class="item-footer padding-2022">
-				<a href="../../LibroReclamos.php">Libro de Reclamos</a>
-				<p><center>2022 ©</p>
-				<a href="../../index.php">Andes Fly S.A.</a>
-				<p>. All Rights Reserved</p>
-			</div>	
-		</div>
-
-	</footer>
+	<?php 
+	include '../../footer/footer3_Administrador.php';
+	?>
 </body>
 </html>

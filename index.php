@@ -3,45 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="css/estilos.css">
 	<title></title>
 </head>
 <body>
-	<header>
-		<img  src="Imagenes_header/imagen1.jpeg">
-		<nav>
-		   <a href="index.php">Inicio</a>
-		   <a href="Nosotros.php">¿Quiénes somos?</a>
-		   <a href="paquetes.php">Paquetes de tours</a>
-		   <a href="GuiasTuristicos.php">Nuestros guias</a>
-		   <a href="Contactanos.php">Contactanos</a>
-		   <a href="Ejercicios1JS.php">Ejercicios JS</a>
-		   <a href="EjercicioPHP1.php">Ejercicios PHP</a>
-		   <a href="administrador.php">Administrador</a>
-		</nav>
-		
-			<form method="post" class="form-nav" action="/RegionCosta.php">
-				<select name="Departamentos" size="" select onChange="window.open(this.options[this.selectedIndex].value,'_self')">
-					<option selected>Departamentos</option>
-					<option value="Cusco.php">Cuzco</option>
-					<option value="#">Tambopata</option>
-					<option value="#">Apurimac</option>
-					<option value="CostaVerde.php">Lima-Costa Verde</option>
-					<option value="#">Ica</option>
-					<option value="#">La Merced</option>
-					<option value="#">Chanchamayo</option>
-					<option value="#">Paracas</option>
-					<option value="Puno.php">Puno</option>
-				</select>
-			</form>
+	<?php 
+	include 'header/header1.php';
+	require 'controlador/conexion.php';
+	$conn = conectar();
+	?>
 
-			<form class="boton" action="/iniciar.php">
-				<input type="submit" value="INICIAR">
-			</form>
-		
-		
-	</header>
-     <hr>
+	<?php 
+		session_start();
+		if (!isset($_SESSION['emailusuario'])) {
+			echo " ";
+		}else{
+			$aux=$_SESSION['emailusuario'];
+			$persona=buscarCliente($aux,$conn);
+
+			echo "<h3>Bienvenido: $persona[0] $persona[1]</h3>";
+			echo "<h3><a href='procesamiento_administrador/proceso_cerrar_sesion.php'>Cerrar Sesión</a></h3>";
+		}
+
+	?>
+	
 
 	<main>
 		<h1 class="titulo">Agencia de tours ANDES FLY</h1>
@@ -65,19 +50,19 @@
 			<div class="regiones__cards">
 			    <img class="regiones__img" src="imagenes/img3.jpg" width="330" height="220">
 				<h3>COSTA</h3>
-				<a href="RegionCosta.php">Conoce más</a> 
+				<a href="paginas/RegionCosta.php">Conoce más</a> 
 		    </div>
 
 		    <div class="regiones__cards">
 				<img class="regiones__img" src="imagenes_sierra/Apurimac3.png" width="330" height="220"><br>
 				<H3>SIERRA</H3>
-				<a href="SIERRA.php">Conoce más</a>
+				<a href="paginas/SIERRA.php">Conoce más</a>
 		    </div>
 
 		    <div class="regiones__cards">
 				<img class="regiones__img" src="imagenes/img3_selva.jpg" width="330" height="220"><br>
 				<H3>SELVA</H3>
-				<a href="SELVA.php">Conoce más</a>
+				<a href="paginas/SELVA.php">Conoce más</a>
 		    </div>
 		</section>
 
@@ -92,7 +77,7 @@
 						La ciudad es un punto de partida hacia las islas Ballestas deshabitadas, hogar de lobos marinos, pelícanos y pingüinos de Humboldt. 
 						La escabrosa Reserva Nacional de Paracas tiene abundante fauna y se extiende por desierto, océano, islas y la península de Paracas.
 					</p>
-					<a href="Paracas.php">Conoce más</a>
+					<a href="paginas/Paracas.php">Conoce más</a>
 				</div>
 			
 				
@@ -104,7 +89,7 @@
 						Tomara un sendero de la selva inca desde Cusco a Machu Picchu. En el camino, participará en actividades de aventura
 					    como ciclismo, rafting, tirolesa y senderismo, todo mientras disfruta de las impresionantes vistas de las montañas y ríos peruanos.
 					</p>
-					<a href="Cusco.php">Conoce más</a>
+					<a href="paginas/Cusco.php">Conoce más</a>
 				</div>
 				
 					
@@ -118,37 +103,13 @@
 						por el lago Sandoval y emprenda algunas excursiones por la selva. Esta es una gran oportunidad
 						para desconectar y sumergirse en la hermosa naturaleza del Perú durante su viaje
 				    </p>
-				    <a href="Tambopata.php">Conoce más</a>
+				    <a href="paginas/Tambopata.php">Conoce más</a>
 				</div>
 		</section>
 
 	</main>
-    <hr>
-	<footer id="pie" class="centrado">
-
-		<div class="contenido-columnas">
-			<div class="item-footer padding-direccion">
-				<h2>DIRECCIÓN</h2>
-				<p>Av. Arequipa 1480,Cercado de Lima, Provincia de Lima</p>
-				<p>+51 945 654 321</p>
-				<p>informaciones@andesfly.com | derechosrecervadors@andesfly.com</p>
-			</div>
-
-			<div class="logos-tamaño item-footer padding-nosotros">
-				<h2>CONOCE PERÚ<h2>
-				<a href="Nosotros.php">Sobre Nosotros</a><br>
-				<img src="Imagenes_header/facebook.png"><br>
-				<img src="Imagenes_header/youtube.png">
-			</div>
-
-			<div class="item-footer padding-2022">
-				<a href="LibroReclamos.php">Libro de Reclamos</a>
-				<p><center>2022 ©</p>
-				<a href="index.php">Andes Fly S.A.</a>
-				<p>. All Rights Reserved</p>
-			</div>	
-		</div>
-
-	</footer>
+	<?php 
+		include 'footer/footer1.php';
+	?>
 </body>
 </html>

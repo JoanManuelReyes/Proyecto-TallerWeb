@@ -120,7 +120,7 @@
 
 /* Tabla Reclamos */
 .card_reclamos{
-    margin:10px 390px;
+    margin:10px 650px;
     padding: 20px 50px;
     border: 2px solid black;
     background-color:#FFC893;
@@ -184,5 +184,9 @@
     text-decoration: none;
     color: #3FCB2C;
     margin: 5px;
+}
+
+.tamañoletraIngreso{
+    font-size: 18px;
 }
 

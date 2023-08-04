@@ -6,9 +6,15 @@
 	if($action==='Agregar'){
 		$cod=$_REQUEST['codigo'];
 		$nrobol=$_REQUEST['boleto'];
+		$fecha=$_REQUEST['fecha'];
+		$nombre=$_REQUEST['nombre'];
+		$apellido=$_REQUEST['apellido'];
 		$dni=$_REQUEST['DNI'];
+		$telefono=$_REQUEST['telefono'];
+		$email=$_REQUEST['email'];
+		$dir=$_REQUEST['direccion'];
 		$des=$_REQUEST['descripcion'];
-		agregarReclamo($cod,$nrobol,$dni,$des,$conn);
+		agregarReclamo($cod,$nrobol,$fecha,$nombre,$apellido,$dni,$telefono,$email,$dir,$des,$conn);
 	}
 	
 	if($action==='eliminar'){
@@ -19,9 +25,15 @@
 	if($action==='Actualizar'){
 		$cod=$_REQUEST['codigo'];
 		$nrobol=$_REQUEST['boleto'];
+		$fecha=$_REQUEST['fecha'];
+		$nombre=$_REQUEST['nombre'];
+		$apellido=$_REQUEST['apellido'];
 		$dni=$_REQUEST['DNI'];
+		$telefono=$_REQUEST['telefono'];
+		$email=$_REQUEST['email'];
+		$dir=$_REQUEST['direccion'];
 		$des=$_REQUEST['descripcion'];
-		actualizarReclamo($cod,$nrobol,$dni,$des,$conn);
+		actualizarReclamo($cod,$nrobol,$fecha,$nombre,$apellido,$dni,$telefono,$email,$dir,$des,$conn);
 	}
 
 	header('location:../administracion_paginas/reclamos/listar.php');

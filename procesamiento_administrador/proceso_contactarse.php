@@ -5,10 +5,13 @@
 
 	if($action==='Agregar'){
 		$id=$_REQUEST['identificador'];
+		$nombre=$_REQUEST['nombre'];
+		$email=$_REQUEST['email'];
+		$tel=$_REQUEST['telefono'];
 		$dni=$_REQUEST['DNI'];
 		$snt=$_REQUEST['asunto'];
 		$mns=$_REQUEST['descripcion'];
-		agregarContacto($id,$dni,$snt,$mns,$conn);
+		agregarContacto($id,$nombre,$email,$tel,$dni,$snt,$mns,$conn);
 	}
 	
 	if($action==='eliminar'){
@@ -18,10 +21,13 @@
 
 	if($action==='Actualizar'){
 		$id=$_REQUEST['identificador'];
+		$nombre=$_REQUEST['nombre'];
+		$email=$_REQUEST['email'];
+		$tel=$_REQUEST['telefono'];
 		$dni=$_REQUEST['DNI'];
 		$snt=$_REQUEST['asunto'];
 		$mns=$_REQUEST['descripcion'];
-		actualizarContacto($id,$dni,$snt,$mns,$conn);
+		actualizarContacto($id,$nombre,$email,$tel,$dni,$snt,$mns,$conn);
 	}
 
 	header('location:../administracion_paginas/contactarse/listar.php');
