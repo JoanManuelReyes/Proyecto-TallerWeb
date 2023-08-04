@@ -1,0 +1,98 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+.recorrido-selva{
+	width: 100%;
+	height: 720px;
+	overflow: hidden;
+    box-shadow: 5px 10px 10px black;
+	
+
+}
+.recorrido-selva ul{
+	display: flex;
+	padding: 0;
+	animation: cambio 15s infinite alternate linear;
+	animation-timing-function: ease-in-out;
+	width: 300%;
+}
+
+.recorrido-selva li{
+	width: 100%;
+    height: 100%;
+	list-style: none;
+
+}
+
+.recorrido-selva img{
+	width: 100%;
+	height: 720px;
+	
+}
+
+@keyframes cambio{
+	0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+
+}
+.slider-selva{
+    width: 100%;
+    font-size: 22px;
+}
+.slider-selva h1,h5 {
+    text-align: center;
+}
+.info{
+    margin:50px 250px ;
+    font-size: 18px;
+}
+.info__descripcion{
+    margin-bottom: 50px  ;
+}
+.info__descripcion h2{
+    margin-bottom: 15px;
+}
+.info__descripcion ul{
+    margin-top: 30px;
+    margin-left: 50px;
+    
+}
+.info__itinerario{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.info__itinerariot{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.reserva{
+    margin-top: 30px;
+    text-align: center;
+}
+.reserva a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+.reserva a:hover{
+    color: #D5372F;
+    transform: scale(1.1);
+    font-weight: 700;
+    transition: 0.5s;
+}
